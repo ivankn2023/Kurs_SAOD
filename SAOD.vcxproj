@@ -128,12 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Extradition.cpp" />
     <ClCompile Include="SAOD.cpp" />
     <ClCompile Include="Reader.cpp" />
+    <ClCompile Include="Sim.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h" />
+    <ClInclude Include="Extradition.h" />
     <ClInclude Include="Reader.h" />
+    <ClInclude Include="Sim.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,23 +5,7 @@
 #include <string>
 using namespace std;
 
-struct node {
-	node* prev;
-	string node_name;
-	string node_adress;
-	node* next;
-	node(string nodname, string nodadress)
-	{
-		prev = NULL;
-		node_name = nodname;
-		node_name = nodadress;
-		next = NULL;
-	}
-};
-void insertik(node*& head, string, string);
-int getsizik(node* head);
-string* returnik(node* head);
-void delet(node*& head);
+
 
 struct passport
 {
@@ -29,9 +13,36 @@ struct passport
 	string place;
 	string date;
 	string name;
-	int birthday_year;
+	int birthday_year = 0;
 	string adress_city;
 };
+
+void client_register(string pass_num);
+
+
+struct node {
+	node* prev;
+	passport data;
+	node* next;
+	node(string number, string place, string date, string name, int birthday_year, string adress)
+	{
+		prev = NULL;
+		data.number = number;
+		data.place = place;
+		data.date = date;
+		data.name = name;
+		data.birthday_year = birthday_year;
+		data.adress_city = adress;
+		next = NULL;
+	}
+};
+void insertik(node*& head, string number, string place, string date, string name, int birthday_year, string adress);
+int getsizik(node* head);
+int* returnik(node* head);
+void deletik(node*& head);
+void coutik(node* head);
+
+
 
 struct drevo {
 public:
@@ -41,6 +52,7 @@ public:
 	int height;
 	passport client;
 };
+
 int height(struct drevo*& elem);
 int bfactor(struct drevo*& elem);
 void fixheight(struct drevo*& elem);
@@ -52,12 +64,15 @@ drevo* find_min(drevo*& Root);
 drevo* rem_min(drevo*& Root);
 drevo* del(struct drevo*& Root, string value);
 int no_unic_number(struct drevo* Root, string num);
-void find_number(struct drevo* Root, string value);
-void find_name(struct drevo* Root, string value);
+string find_client_year(struct drevo* Root, string value);
+void find_name(drevo* tree, string nam);
+void find_adress(drevo* tree, string nam);
 void treeprint(drevo*& tree);
-
+void find_number(drevo* tree, string nam);
 
 void ClientChoise();
+
+int client_year_return(string s);
 bool passport_trouble(string s);
 bool date_trouble(string s);
 bool calendar_trouble(int day, int month, int year);

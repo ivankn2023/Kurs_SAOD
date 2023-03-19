@@ -24,12 +24,24 @@
     <ClCompile Include="Reader.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Sim.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Extradition.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Reader.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Sim.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Extradition.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
